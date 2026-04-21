@@ -13,6 +13,15 @@ const postSchema=new mongoose.Schema({
     description:{
         type:String,
         required:[true,"description is required"]
+    },
+    author:{
+        type:String,
+        required:true
+    },
+    createdBy:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'user',
+        required:true
     }
 });
 
