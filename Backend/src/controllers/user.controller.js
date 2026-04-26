@@ -35,7 +35,11 @@ async function registerController(req,res){
         expiresIn:24*24*60*60
     })
 
-    res.cookie("token",token);
+    res.cookie("token",token,{
+        httpOnly:true,
+        sameSite:"None",
+        secure:true
+    });
 
     res.status(201).json({
         message:"User registered succesfully"
@@ -70,7 +74,11 @@ async function loginController(req,res){
     },process.env.JWT_SECRET,
     {expiresIn:24*24*60*60})
 
-    res.cookie("token",token);
+    res.cookie("token",token,{
+        httpOnly:true,
+        sameSite:"None",
+        secure:true
+    });
 
     res.status(200).json({
         message:"user logged in sucessfully",

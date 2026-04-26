@@ -8,7 +8,7 @@ const userRoute=require("./routes/user.route")
 const postRoute=require("./routes/post.route")
 
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://endearing-kheer-c04395.netlify.app/",
     credentials:true
 }));
 
