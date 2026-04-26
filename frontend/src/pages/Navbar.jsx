@@ -9,7 +9,7 @@ const Navbar = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await axios.get('http://localhost:3000/api/create/post');
+                const res = await axios.get('https://blog-1-9t7q.onrender.com/api/create/post');
                 // Ensure data is an array based on your previous logs
                 setData(res.data.post || []); 
             } catch (err) {

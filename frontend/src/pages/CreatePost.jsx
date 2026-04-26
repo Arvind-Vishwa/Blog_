@@ -13,7 +13,7 @@ const CreatePost = () => {
         
 
         try{
-            const res=await axios.post('http://localhost:3000/api/create/post',
+            const res=await axios.post('https://blog-1-9t7q.onrender.com/api/create/post',
                 {title,author,description,img},
                 {withCredentials:true}
             )
